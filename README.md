@@ -27,6 +27,12 @@ The player takes on the role of a commander of a newly claimed star system. Thro
 - [**Contributing Guide**](contributing.md) - Learn how to add new content (factions, buildings, missions, leaders) using the data-driven architecture.
 - [**Planning & Roadmap**](planning.md) - See what features are coming next (e.g., gear systems, combat, fleet management).
 
+## 🌐 Play Online
+
+Galactic Ascent is configured to automatically deploy to GitHub Pages! Any code merged into the `main` branch will trigger a GitHub Action that builds the game and deploys it live. 
+
+Because the game utilizes your browser's local storage to save your progress, you can play directly from the GitHub Pages site and pick up right where you left off when you return.
+
 ## 🎮 Running Locally
 
 1. Install dependencies:
