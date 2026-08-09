@@ -1,32 +1,50 @@
-# React + TypeScript + Vite
+# Galactic Ascent
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Galactic Ascent is a minimal viable product (MVP) for a sci-fi browser-based strategy game inspired by the gameplay loops of games like *Game of Thrones: Ascent*.
 
-Currently, two official plugins are available:
+The player takes on the role of a commander of a newly claimed star system. Throughout the game, they build up their base, accumulate resources, recruit leaders, complete story-driven missions, and align with galactic factions to gain unique permanent bonuses via a reincarnation (prestige) system.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+- **Base Building & Resource Management:** Construct and upgrade buildings to passively generate 4 core resources: Credits, Minerals, Research, and Influence.
+- **Faction Alignment:** Choose from 5 distinct galactic factions, each granting unique passive bonuses and exclusive buildings.
+- **Story Missions:** Complete branching story missions that unlock new buildings, leaders, and story progress. Real-time countdowns add a time-management aspect.
+- **Leader System:** Recruit and assign specialized leaders (Military, Science, Economic, Subterfuge) of varying rarities to buildings to boost production or to missions to increase success chances. Leaders gain XP and level up.
+- **Reincarnation (Prestige):** Reset your progress to start fresh, taking your current faction's permanent bonus with you into the next incarnation.
+- **Persistence:** Progress is automatically saved locally to `localStorage` and calculates offline earnings upon returning to the game.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠 Tech Stack
 
-## Expanding the Oxlint configuration
+- **Framework:** [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **State Management:** [Zustand](https://github.com/pmndrs/zustand)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Fonts:** Orbitron & Rajdhani (Google Fonts)
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## 📖 Documentation
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+- [**Contributing Guide**](contributing.md) - Learn how to add new content (factions, buildings, missions, leaders) using the data-driven architecture.
+- [**Planning & Roadmap**](planning.md) - See what features are coming next (e.g., gear systems, combat, fleet management).
+
+## 🎮 Running Locally
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+3. Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+## 🏗 Building for Production
+
+To build the project for production, run:
+```bash
+npm run build
 ```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+The optimized bundle will be placed in the `dist` directory.
